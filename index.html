@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <title>Resume Generator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container" id="cv-form">
+    <h1>Resume Generator</h1>
+    <p>Hey Guys,Lets Make Your Resume Quickly!</p>
+    <div class="row">
+    <div class="col-md-6">
+        <!-- col 1 -->
+        <h3>Personal Information</h3>
+
+        <div class="form-group ">
+            <label for="namefield">Your Name</label>
+            <input type="text" id="namefield" placeholder="Enter here" class="form-control">
+        </div>
+
+        <div class="form-group mt-3">
+            <label for="Contactfield">Cell no.</label>
+            <input type="number" id="number" placeholder="Enter here" class="form-control">
+        </div>
+
+        <div class="form-group mt-3 ">
+            <label for="addressfield">Your Address</label>
+            <textarea  id="addressfield" placeholder="Enter here" class="form-control" rows="5"></textarea>
+        </div>
+
+        <div class="text-secondary ">
+            <label for="namefield">Important Links</label>
+            <!-- <input type="text" id="namefield" placeholder="Enter here" class="form-control"> -->
+        </div>
+        <div class="form-group mt-4">
+            <label for="lifield">LinkedIn</label>
+            <input type="text" id="lnfield" placeholder="Enter here" class="form-control">
+        </div>
+
+        <div class="form-group \">
+            <label for="ghfield">GitHub</label>
+            <input type="text" id="ghfield" placeholder="Enter here" class="form-control">
+        </div>
+
+        <div class="form-group \">
+            <label for="Igfield">Instagram</label>
+            <input type="text" id="igfield" placeholder="Enter here" class="form-control">
+        </div>
+
+        <div class="form-group mt-2" id="ce">
+            <label for="ceField">Projects</label>
+            <textarea placeholder="Enter here" class="form-control ceField" rows="5"></textarea>
+
+
+        <div class="container mt-3" id="ceAddButton">
+            <button onclick="Addcefield()" class="btn btn-primary btn-sm">Add</button>
+        </div>
+    </div>
+
+
+    </div>
+<div class="col-md-6">
+    <!-- Col 2 -->
+    <h3>Professional Information</h3>
+
+    <div class="form-group mt-2 ">
+        <label for="addressfield">Objectives</label>
+        <textarea  id="skillfield" placeholder="Enter here" class="form-control" rows="5"></textarea>
+    </div>
+
+    <div class="form-group mt-2" id="we">
+        <label for="weField">Work Experience</label>
+        <textarea  placeholder="Enter here" class="form-control weField"  rows="3"></textarea>
+
+
+    <!-- new text area -->
+
+
+
+
+
+    <div class="container  mt-2 weAddButton" id="weAddButton">
+        <button onclick="addnewwefield()"class="btn btn-primary btn-sm">Add</button>
+    </div>
+</div>
+
+
+    <div class="form-group mt-2 " id="aq">
+        <label for="aqField">Academic Qualification</label>
+        <textarea placeholder="Enter here" class="form-control aqField" rows="3"></textarea>
+
+
+
+    <div class="container mt-3 aqAddButton" id="aqAddButton">
+        <button onclick="addnewaqfield()"class="btn btn-primary btn-sm ">Add</button>
+    </div>
+</div>
+
+
+<!-- <div class="container text-center mt-5">
+
+
+
+</div> -->
+</div>
+<div class="container text-center mt-3">
+
+  <button onclick="generateCV()" class="btn btn-primary btn-lg  text-center">Generate CV</button>
+
+</div>
+
+
+</div>
+
+
+<!-- cv template -->
+
+<div class="container" id="cv-template">
+
+    <div class="row">
+       <div class="col-md-4 text-center py-5 background " >
+<!-- first col -->
+<img src="https://st.depositphotos.com/2101611/3925/v/600/depositphotos_39258143-stock-illustration-businessman-avatar-profile-picture.jpg" alt="" class="myimg" >
+
+
+
+      <!-- <div class="id"> -->
+       <p id="namet1">Srushti Kulkarni</p>
+       <p id="contactt"> +91123456789</p>
+       <p id="addressT">25,Bhagwant Bunglow,Ahemdbad </p>
+
+       <hr>
+
+       <p><a id="LiT" href="#1">https://www.Linkedin.com/in/srushti-kulkarni-875477196/</a></p>
+
+       <p><a id="ghT" href="#1">https://www.github.com/srushtik942</a></p>
+
+       <p><a id="IGT" href="#1">https://www.Instagram.com/__srushtikulkarni</a></p>
+
+      <!-- </div> -->
+
+      <!-- <hr>
+      <p > <h4>Technical Skills</h4></p>
+      <ul id="tst">
+      <li>C++</li>
+      <li>Python</li>
+      <li>JAVA</li>
+      <li>Database</li>
+      <li>UI/UX</li>
+      </ul>
+      <hr> -->
+
+
+   </div>
+
+   <!-- second col -->
+
+       <div class="col-md-8 py-5">
+           <h1 id="namet2" class="text-center" style="font-weight:980">Srushti Kulkarni</h1>
+
+
+<!-- objective card -->
+
+<!-- <div class="card mb-4">
+   <div class="card-header"></div>
+   <h3>Objective</h3>
+
+   <div class="card-body">
+        <p>
+           Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+           Animi error architecto nihil tenetur eveniet possimu
+           stemporibus molestiae consectetur, magnam dolorum autem harum
+           illo sed vel blanditiis ipsam dicta recusandae pariatur ad v
+           eritatis. Nam voluptates deleniti unde sequi. Id, placeat o
+           dio fugit quo rerum ipsa debitis incidunt eveniet rem saepe dolores.
+       </p>
+   </div>
+</div>
+
+-->
+<div class="card">
+   <h5 class="card-header"style="background-color:aqua">Objectives</h5>
+   <div class="card-body">
+     <h5 class="card-title"></h5>
+     <p id= "edut"class="card-text">
+       Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+       Eligendi autem asperiores deserunt enim eveniet error
+       repudiandae vitae mollitia, et deleniti id quibusdam! Et iusto r
+       ecusandae asperiores ad? Necessitatibus, dolorem est.</p>
+     <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+   </div>
+ </div>
+
+ <!-- Work Experience -->
+
+ <div class="card mt-4">
+   <h5 class="card-header"style="background-color:aqua">Work Experience</h5>
+   <div class="card-body">
+     <h5 class="card-title"></h5>
+    <ul id="wet">
+       <li>Lorem ipsum dolor sit amet consectetur
+           adipisicing elit.
+
+       </li>
+
+       <li>Lorem ipsum dolor sit amet consectetur
+           adipisicing elit.
+
+       </li>
+
+       <li>Lorem ipsum dolor sit amet consectetur
+           adipisicing elit.
+
+       </li>
+    </ul>
+
+     <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+   </div>
+ </div>
+
+
+<!-- academic qualification -->
+
+ <div class="card mt-4">
+   <h5 class="card-header"style="background-color:aqua">Academic Qualification</h5>
+   <div class="card-body">
+     <h5 class="card-title"></h5>
+    <ul id="aqt">
+       <li>Lorem ipsum dolor sit amet consectetur
+           adipisicing elit.
+
+       </li>
+
+       <li>Lorem ipsum dolor sit amet consectetur
+           adipisicing elit.
+
+       </li>
+
+       <li>Lorem ipsum dolor sit amet consectetur
+           adipisicing elit.
+
+       </li>
+    </ul>
+
+     <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+   </div>
+ </div>
+
+
+
+ <!-- project -->
+
+ <div class="card mt-4">
+   <h5 class="card-header "style="background-color:aqua">Project</h5>
+   <div class="card-body">
+     <h5 class="card-title"></h5>
+    <ul id="pt">
+       <li>Lorem ipsum dolor sit amet consectetur
+           adipisicing elit.
+
+       </li>
+
+       <li>Lorem ipsum dolor sit amet consectetur
+           adipisicing elit.
+
+       </li>
+
+       <li>Lorem ipsum dolor sit amet consectetur
+           adipisicing elit.
+
+       </li>
+    </ul>
+
+     <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+   </div>
+ </div>
+
+ <div class="container mt-3 text-center">
+   <button onclick="printCV()"type="button" class="btn btn-primary">Print CV</button>
+
+
+
+ </div>
+
+
+
+       </div>
+    </div>
+
+</div>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+<script src="app.js"></script>
+</body>
+</html>

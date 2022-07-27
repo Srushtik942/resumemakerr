@@ -1,0 +1,37 @@
+/* body{
+
+    background-color: aqua;
+} */
+h1{
+    text-align: center;
+    margin: 3px;
+}
+p{
+   text-align: center;
+
+}
+ /* #cv-template{
+
+    display: none;
+} */
+
+/*  #cv-form{
+      display: none;
+
+} */
+.myimg{
+
+    border: 1px solid rgb(71, 6, 6);
+    border-radius: 50%;
+    width:200px;
+}
+.background{
+
+    background-color: aqua;
+}
+.card-header{
+    background-color: aqua;
+}
+.p.ul{
+    text-align: center;
+}
